@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+	<Inventory>
+		<TestCase>		//TC01_validLogin
+			<url>https://www.linkedin.com/home/</url>
+			<username>hariskhalid.14@gmail.com</username>
+			<password>Automation@22</password>
+			<locator>premium-upsell-link</locator>
+			<message>Try Premium Free for 1 Month</message>
+		</TestCase>
+		<TestCase>		//TC02_emptyFields
+			<url>https://www.linkedin.com/home/</url>
+			<username></username>
+			<password></password>
+			<locator>form__label--error</locator>
+			<message>Please enter an email address or phone number</message>
+		</TestCase>
+		<TestCase>		//TC03_invalidUsername
+			<url>https://www.linkedin.com/home/</url>
+			<username>hariskhalid</username>
+			<password>Automation@22</password>	
+			<locator>form__label--error</locator>
+			<message>Please enter a valid username</message>			
+		</TestCase>		
+ 		<TestCase>		//TC04_invalidPassword
+			<url>https://www.linkedin.com/home/</url>
+			<username>hariskhalid.14@gmail.com</username>
+			<password>@@@@@@@@@@@@@</password>	
+			<locator>form__label--error--link</locator>
+			<message>Forgot password?</message>			
+		</TestCase>
+	</Inventory>
+</Project>
